@@ -16,7 +16,6 @@ public class FactorialORFibonacci {
         
         array();
         user();
-    
         }
     
         public static void array(){
@@ -34,24 +33,33 @@ public class FactorialORFibonacci {
                     int array=sc.nextInt();
                     element[i] = array;
             }
-               
-                
+            
+
+           
         }
         
         public static void user(){
+           
             sc = new Scanner(System.in);
+            String error="error";
+            
+            while (!"good".equals(error)){
             System.out.print("Fibonacci or Factorial\n"
                     + "[1] Fibonacci\n"
                     + "[2] Factorial\n");
             
             cho= sc.nextLine();
-            
+
             if(cho.equals("1")){
+                error="good";
                 displayFibo();
             }else if(cho.equals("2")){
+                error="good";
                 displayFact();
+            }else{
+                System.out.println("INVALID INPUT! TYPE 1 or 2");
             }
-            
+            }
         }
         
         public static void displayFibo(){
@@ -103,5 +111,3 @@ public class FactorialORFibonacci {
         }
         
     }
-    
-
